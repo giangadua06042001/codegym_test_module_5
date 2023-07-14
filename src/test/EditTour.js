@@ -21,7 +21,7 @@ export default function EditTour() {
     })
     },[])
     return(
-        <>
+        <div>
             <h2>Sửa Tour</h2>
             <Formik initialValues={tour} onSubmit={(values)=>{
                 axios.put(`http://localhost:3000/tuors/${id}`,values).then(()=>{
@@ -48,7 +48,7 @@ export default function EditTour() {
                         <tr>
                             <td>Mô </td>
                             <td>
-                                <Field name={'description'}></Field>
+                                <Field as={"textarea"} name={'description'}></Field>
                             </td>
                         </tr>
                         <tr>
@@ -61,6 +61,6 @@ export default function EditTour() {
                     </table>
                 </Form>
             </Formik>
-        </>
+        </div>
     )
 }

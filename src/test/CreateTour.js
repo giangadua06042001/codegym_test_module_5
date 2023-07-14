@@ -40,7 +40,7 @@ return(
                   <tr>
                   <td>Mô Tả</td>
                      <td>
-                         <Field name={'description'}></Field>
+                         <Field as={"textarea"} name={'description'}></Field>
                      </td>
                  </tr>
                  <tr>
